@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +22,8 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth', 'role:admin'])->group(function () {
 
     Route::resource('kategori', CategoriesController::class)->parameters(['categories' => 'category',]);
+
+    Route::resource('produk', ProductsController::class)->parameters(['products' => 'produk',]);
 });
 
 require __DIR__.'/auth.php';

@@ -52,7 +52,7 @@
             </li>
 
             <li>
-                <a href="#"
+                <a href="{{ route('produk.index') }}"
                    data-tooltip="Produk"
                    class="menu-item flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 {{ request()->routeIs('produk.*') ? 'active' : 'text-gray-600 hover:text-green-700' }}">
                     <svg class="menu-icon w-5 h-5 flex-shrink-0 {{ request()->routeIs('produk.*') ? 'text-white' : 'text-gray-400' }}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
